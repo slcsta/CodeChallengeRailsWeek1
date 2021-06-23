@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+parties = Party.create([{name: 'Fun Party', date: '6/26/21'}, {name: 'Crazy Party', date: '8/26/21'}])
