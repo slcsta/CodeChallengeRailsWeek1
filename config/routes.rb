@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :supplies
+  resources :categories
   get 'parties', to: 'parties#index'
 
   get 'parties/new', to: 'parties#new'

@@ -1,4 +1,9 @@
 class Party < ApplicationRecord
+    belongs_to :category
+    has_many :party_supplies
+    has_many :supplies, through: :party_supplies
+
+    accepts_nested_attributes_for :category
     validates :name, presence: true
     def self.list_by_date
         self.order(:date)

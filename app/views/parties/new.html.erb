@@ -5,5 +5,16 @@
 <%= f.text_field :date %>
 <%= f.label "budget" %>
 <%= f.number_field :budget, step: 0.01 %>
-<%= f.submit %>
+<br>
+<br>
+<h3>Category</h3>
+<%= f.collection_select :category_id, Category.all, :id, :name %>
+<%= f.fields_for :category do |c| %>
+    <%= c.label :name %>
+    <%= c.text_field :name %>
+    
+    <br>
+    <br>
+<% end %>
+    <%= f.submit %>
 <% end %>
